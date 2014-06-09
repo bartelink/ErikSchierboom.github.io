@@ -1,30 +1,16 @@
 ---
 layout: page
-title: About
+title: About me
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+My name is Erik Schierboom and I'm a software developer from The Netherlands. Writing software is probably my greatest passion! I have written software in many languages, but I'm particularly fond of C#. Most applications I have written were web applications, though I have also created mobile apps.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+Besides writing software, I try to help others by posting on [stackoverflow](http://stackoverflow.com/users/2071395/erik-schierboom), creating [demo applications](https://github.com/ErikSchierboom/CustomOAuthClient) and writing [blog posts]({% post_url 2014-06-23-extension-methods-an-introduction %}).
 
-There are currently two themes built on Poole:
+### Work
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+For my day-time job I work at the [Radboud University](http://www.ru.nl/isc). In my off-work hours I work on a website for movie enthusiasts, [iCheckMovies.com](http://www.icheckmovies.com), together with two friends of mine. If you want to know more about my professional career, please visit my [LinkedIn page](http://nl.linkedin.com/in/erikschierboom).
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+### Hobbies
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.org), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+When I am not programming, you can find me doing some good-old book reading, watching a movie or listening to some music.

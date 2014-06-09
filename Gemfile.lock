@@ -94,8 +94,9 @@ GEM
     yajl-ruby (1.1.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
   github-pages
-  wdm
+  wdm (~> 0.1.0)
