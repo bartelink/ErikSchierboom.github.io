@@ -4,7 +4,8 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}. <a href="{{ page.url }}#disqus_thread" title="Comments on {{ page.title }}">&nbsp;</a></span>
+  <span class="post-date">{{ page.date | date_to_string }}. 
+  <a href="{{ page.url }}#disqus_thread" title="Comments on {{ page.title }}">&nbsp;</a></span>
   {{ content }}
 </div>
 

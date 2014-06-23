@@ -1,7 +1,8 @@
 ---
-layout: post
-title: Extension methods - An introduction
+layout:   post
+title:    Extension methods - An introduction
 comments: true
+tags:     [C#, .NET]
 ---
 
 Extension methods were introduced in C# 3.0. The [MSDN](http://msdn.microsoft.com/en-us/library/bb308966.aspx#csharp3.0overview_topic3) defines it as follows:
