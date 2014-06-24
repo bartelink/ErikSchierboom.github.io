@@ -77,7 +77,6 @@ StringExtensions.StartsWithFromIndex("Hello, World", "World", 7)
 {% endhighlight %}
 
 ### Example 3: extending value types
-
 Extension methods can be defined for any type. For example, if you often convert integers to their hexadecimal representation, you could define this extension method:
 
 {% highlight c# %}
@@ -90,6 +89,22 @@ public static class IntExtensions
 } 
 
 10.ToHex() // Returns A
+{% endhighlight %}
+
+### Example 4: using generics
+Extension methods can also use generics. As an example, here's an extension method to convert an `IEnumerable<T>` to an `HashSet<T>`:
+
+{% highlight c# %}
+public static class EnumerableExtensions
+{
+    public static HashSet<T> ToSet<T>(this IEnumerable<T> source)
+    {
+        return new HashSet<T>(source);
+    }
+}
+
+// Returns a HashSet<int> containing 1, 2 and 3
+new int[] { 1, 2, 2, 3, 3 }.ToSet(); 
 {% endhighlight %}
 
 ### Limitations
@@ -109,6 +124,8 @@ public static class IntExtensions
 Once people learn about extension methods, they often convert all their static helper methods to extension methods. However, this can lead to situations where a single type has over a hundred different methods, which makes finding methods harder.
 
 To prevent this, ask yourself the following simple questions when deciding if a method should be defined as an extension method:
+
+- Does it make sense as an extension method? Not all methods work well as instance methods. If so, don't make it an extension method. 
 
 - How often do I use this method? If the method is not used often, don't make it an extension method.
 
