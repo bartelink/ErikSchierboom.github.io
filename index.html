@@ -7,12 +7,12 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
+      <a href="{{ post.url }}" title="{{ post.title }}">
         {{ post.title }}
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}. <a href="{{ post.url }}#disqus_thread" title="View comments on {{ post.title }}">&nbsp;</a></span>
+    <span class="post-date">{{ post.date | date_to_string }}. <a href="{{ post.url }}#disqus_thread" title="Comments on {{ post.title }}">&nbsp;</a></span>
 
     {{ post.content }}
   </div>
@@ -21,17 +21,17 @@ title: Home
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+    <a class="pagination-item older" href="/page{{paginator.next_page}}" title="Older posts">Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
+      <a class="pagination-item newer" href="/" title="Newer posts">Newer</a>
     {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}" title="Newer posts">Newer</a>
     {% endif %}
   {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <span class="pagination-item newer" title="Newer posts">Newer</span>
   {% endif %}
 </div>
