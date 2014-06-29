@@ -1,6 +1,8 @@
 ---
-layout: post
-title: Extension methods - Advanced
+layout:   post
+title:    Extension methods - Advanced
+comments: true
+tags:     [C#, .NET]
 ---
 
 The [Extension methods - An introduction]({% post_url 2014-06-23-extension-methods-an-introduction %}) post showed the basics of extension methods. This post will show more advanced usages of extension methods.

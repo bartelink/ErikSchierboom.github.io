@@ -46,3 +46,16 @@
     border: 1px solid #EF7522;
 }
 .social a.rss:hover { border: 1px solid #cf5d0f }
+
+.post-meta {
+    margin-bottom: 1rem;
+
+}
+
+.post-meta span {
+  display: inline;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  margin-right: 0.4rem;
+  color: #9a9a9a;
+}
