@@ -13,4 +13,4 @@ For my day-time job I work at the [Radboud University](http://www.ru.nl/isc). In
 
 ### Hobbies
 
-When I am not programming, you can find me doing some good-old book reading, watching a movie or listening to some music.
+When I am not programming, you can find me doing some good-old book reading, watching a movie, listening to some music or playing on the guitar.
