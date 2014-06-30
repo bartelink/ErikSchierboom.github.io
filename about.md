@@ -5,7 +5,7 @@ title: About me
 
 My name is Erik Schierboom and I'm a software developer from The Netherlands. Writing software is probably my greatest passion! I have written software in many languages, but I'm particularly fond of C#. Most applications I have written were web applications, though I have also created mobile apps.
 
-Besides writing software, I try to help others by posting on [stackoverflow](http://stackoverflow.com/users/2071395/erik-schierboom), creating [demo applications](https://github.com/ErikSchierboom/CustomOAuthClient) and writing [blog posts]({% post_url 2014-06-23-extension-methods-an-introduction %}).
+Besides writing software, I try to help others by posting on [stackoverflow](http://stackoverflow.com/users/2071395/erik-schierboom), creating [demo applications and libraries](https://github.com/ErikSchierboom/) and writing [blog posts](/posts-by-date/).
 
 ### Work
 
