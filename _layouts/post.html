@@ -5,11 +5,23 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
 
-   <div class="post-meta">
-     <span class="post-date"><i class="fa fa-calendar"></i> {{ page.date | date_to_string }}</span>
-     <span class="post-tags"><i class="fa fa-tags"></i> {{ page.tags | join:', ' }}</span>
-     <span class="post-comments"><i class="fa fa-comment"></i> <a href="{{ page.url }}#disqus_thread" title="Comments on {{ page.title }}">&nbsp;</a></span>
+  <div class="post-meta">
+	  <span class="post-date">
+	    <i class="fa fa-calendar"></i> 
+	    <a href="/posts-by-date/#{{ page.date | date_to_string | uri_escape }}" title="Posts on {{ page.date | date_to_string }}">{{ page.date | date_to_string }}</a>
+	  </span>
+	  <span class="post-tags">
+	    <i class="fa fa-tags"></i> 
+	    {% for tag in page.tags %}
+	      <a href="/posts-by-tags/#{{ tag | uri_escape }}" title="Posts with tag {{ tag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}
+	    {% endfor %}
+	  </span>
+	  <span class="post-comments">
+	    <i class="fa fa-comment"></i> 
+	    <a href="{{ page.url }}#disqus_thread" title="Comments on {{ page.title }}">&nbsp;</a>
+	  </span>
   </div>
+
   {{ content }}
 </div>
 

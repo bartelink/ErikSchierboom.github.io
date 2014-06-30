@@ -1,0 +1,29 @@
+---
+layout:  page
+title:   Posts by tags
+exclude: true
+---
+
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+
+<ul id="tags-list">
+{% for tag in sortedtags %}
+	<li><a href="#{{ tag | uri_escape }}" title="Posts with tag: {{ tag }}">{{ tag }} ({{ site.tags[tag] | size }})</a></li>
+{% endfor %}
+</uL>
+
+<div style="clear: both" />
+
+{% for tag in sortedtags %}
+  <h3 id="{{ tag | uri_escape }}">{{ tag }} ({{ site.tags[tag] | size }})</h3>
+  <ul>
+  {% for post in site.tags[tag] %}
+    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+  {% endfor %}
+  </ul>
+{% endfor %}

@@ -10,19 +10,11 @@
         <a href="/" title="Home • {{ site.title }}">Home</a>
       </li>
 
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
-              <a href="{{ node.url }}" title="{{ node.title }}">{{ node.title }}</a>
-            </li>
-          {% endif %}
+      {% for node in site.pages %}
+        {% if node.title != null and node.layout == "page" and node.exclude == nil %}
+          <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+            <a href="{{ node.url }}" title="{{ node.title }}">{{ node.title }}</a>
+          </li>
         {% endif %}
       {% endfor %}
     </ul>

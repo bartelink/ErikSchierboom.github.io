@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Software
+title:  Software
 ---
 
 Over the years I have worked on lots of software projects, such as:

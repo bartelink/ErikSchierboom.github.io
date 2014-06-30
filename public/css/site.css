@@ -68,3 +68,12 @@
   margin-right: 0.4rem;
   color: #9a9a9a;
 }
+
+#tags-list {
+    margin-bottom: 3rem;
+}
+
+#tags-list li {
+    float: left;   
+    margin-right: 1.5rem; 
+}
