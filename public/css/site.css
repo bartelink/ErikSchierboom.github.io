@@ -31,21 +31,30 @@
     transition: 0.3s;
 }
 .social a:hover { opacity: 1 }
+
 .social a.twitter {
     background: url('/public/images/social/twitter.png?1385702818') center no-repeat #55cff8;
-    border: 1px solid #55CFF8;
+    border: 1px solid #55cff8;
 }
 .social a.twitter:hover { border: 1px solid #24c1f6 }
+
 .social a.github {
     background: url('/public/images/social/github.png?1385702818') center no-repeat #afb6ca;
     border: 1px solid #afb6ca;
 }
 .social a.github:hover { border: 1px solid #909ab6 }
+
 .social a.rss {
     background: url('/public/images/social/rss.png?1385702818') center no-repeat #ef7522;
-    border: 1px solid #EF7522;
+    border: 1px solid #ef7522;
 }
 .social a.rss:hover { border: 1px solid #cf5d0f }
+
+.social a.stackoverflow {
+    background: url('/public/images/social/stackoverflow.png?1385702818') center no-repeat #c6230b;
+    border: 1px solid #c6230b;
+}
+.social a.stackoverflow:hover { border: 1px solid #961909 }
 
 .post-meta {
     margin-bottom: 1rem;
