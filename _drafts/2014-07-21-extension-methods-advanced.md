@@ -145,3 +145,6 @@ Assembly.GetExecutingAssembly()
     .GetTypes()
     .Where(t => Attribute.IsDefined(t, typeof(ExtensionAttribute)))
 {% endhighlight %}
+
+### Summary
+Of these advanced techniques, the one that is probably most useful is the graceful null-handling. It has the potential of making your code less prone to the infamous `NullReferenceException` without much effort.

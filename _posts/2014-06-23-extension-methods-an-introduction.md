@@ -12,6 +12,7 @@ Extension methods were introduced in C# 3.0. The [MSDN](http://msdn.microsoft.co
 So extension methods allow you to extend existing types by defining static methods, which can then be called as if they were instance methods. Let's see how this works.
 
 ### Example 1: simple extension method
+
 Suppose we want to write a function to check if a `string`'s length is even. As the `string` class is part of the .NET framework, we can't add this new method by modifying its source code. Furthermore, as the `string` class is marked as `sealed`, it can't be extended. Our last resort is to define a static helper method:
 
 {% highlight c# %}
@@ -132,6 +133,6 @@ To prevent this, ask yourself the following simple questions when deciding if a 
 
 - How much does it improve the clarity of the code? If the improvement is not self-evident, don't make it an extension method.
 
-### Conclusion
+### Summary
 
 All in all, extension methods are a great and very useful feature of C#. If used carefully and sparingly, they can really improve the clarity of your code.
