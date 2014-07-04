@@ -17,4 +17,4 @@ author:
 
 paginate:         5
 
-exclude:          ['run.sh', 'run-drafts.sh']
+exclude:          ['*.sh', 'node_modules', 'package.json', 'Gruntfile.js', 'LICENSE.md', 'README.md', 'Gemfile', 'Gemfile.lock', 'CNAME']
