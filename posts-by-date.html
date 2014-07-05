@@ -1,13 +1,12 @@
 ---
 layout:  page
 title:   Posts by date
-exclude: true
 ---
 
-<ul>
+<ul id="date-list">
   {% for post in site.posts %}
     <li id="{{ post.date | date_to_string | uri_escape }}">
-      {{ post.date | date_to_string }}: <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <span class="date">{{ post.date | date_to_string }}</span>: <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>

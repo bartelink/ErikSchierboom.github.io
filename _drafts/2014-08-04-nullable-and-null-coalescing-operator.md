@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    Null, Nullable&lt;T&gt; and the ?? operator
+title:    Nullable&lt;T&gt; and the ?? operator
 comments: true
 tags:     [C#, .NET]
 ---
@@ -39,8 +39,8 @@ int? nullInt = null;
 int? nonNullInt = 2;
 
 nullInt == null;    // Returns true
-nonNullInt == null; // Returns false
 nonNullInt == 2;    // Returns true
+nonNullInt == null; // Returns false
 {% endhighlight %}
 
 #### The **??** operator

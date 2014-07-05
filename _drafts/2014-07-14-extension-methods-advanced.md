@@ -86,13 +86,13 @@ This will lead to a compile-time error:
 
 `Operator '.' cannot be applied to operand of type 'void'`
 
-This error makes sense if we look at the [definition](http://msdn.microsoft.com/en-us/library/3wcytfd1\(v=vs.110\).aspx) of the `Add()` method:
+If we look at the [definition](http://msdn.microsoft.com/en-us/library/3wcytfd1\(v=vs.110\).aspx) of the `Add()` method, we can see that it returns `void` and thus is not chainable:
 
 {% highlight c# %}
 public void Add(T item);
 {% endhighlight %}
 
-This method is not chainable as it is returning `void`. The following extension method allows fluently adding items:
+The following extension method *does* allow fluently adding items:
 
 {% highlight c# %}
 public static class ListExtensions
@@ -106,7 +106,7 @@ public static class ListExtensions
 }
 {% endhighlight %}
 
-This extension method allows us to fluently add items:
+We can use this extension method to fluently add items:
 
 {% highlight c# %}
 var list = new List<int>();
@@ -121,7 +121,7 @@ As extension methods are compiled to plain static method calls, they can be used
 
 `Cannot define a new extension method because the compiler required type 'System.Runtime.CompilerServices.ExtensionAttribute' cannot be found. Are you missing a reference to System.Core.dll?`
 
-It turns out that the compiler tries to add the `ExtensionAttribute` type to compiled extension methods, but that it cannot find that type (it expects to find it in `System.Core.Dll`). 
+It turns out that the compiler tries to add the `ExtensionAttribute` type to compiled extension methods, but can't find that type (it expects to find it in `System.Core.Dll`). 
 
 The solution is simple: define the `ExtensionAttribute` yourself:
 
