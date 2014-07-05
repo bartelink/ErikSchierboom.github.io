@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me
+title:  About me
 ---
 
 My name is Erik Schierboom and I'm a software developer from The Netherlands. Writing software is probably my greatest passion! I have written software in many languages, but I'm particularly fond of C#. Most applications I have written were web applications, though I have also created mobile apps.

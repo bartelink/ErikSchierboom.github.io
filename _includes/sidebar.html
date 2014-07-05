@@ -10,13 +10,17 @@
         <a href="/" title="Home • {{ site.title }}">Home</a>
       </li>
 
-      {% for node in site.pages %}
-        {% if node.title != null and node.layout == "page" and node.exclude == nil %}
-          <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
-            <a href="{{ node.url }}" title="{{ node.title }}">{{ node.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
+      <li class="sidebar-nav-item{% if page.title == "Posts by date" %} active{% endif %}">
+        <a href="/posts-by-date/" title="Posts">Posts</a>
+      </li>
+
+      <li class="sidebar-nav-item{% if page.title == "About me" %} active{% endif %}">
+        <a href="/about/" title="About">About</a>
+      </li>
+
+      <li class="sidebar-nav-item{% if page.title == "Software" %} active{% endif %}">
+        <a href="/software/" title="Software">Software</a>
+      </li>
     </ul>
     
   <div class="social">      
