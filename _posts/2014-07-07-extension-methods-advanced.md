@@ -29,6 +29,8 @@ nullString.GetHashCodeNullSafe() // Returns 0
 nullString.GetHashCode()         // Throws NullReferenceException
 {% endhighlight %}
 
+Note: be careful when using this technique, as people expect a `NullReferenceException` to be thrown when an instance method is called on a `null` instance.
+
 ### Hiding functionality
 Sometimes, you want to hide advanced functionality of a class by default. You could do this by creating two classes: a `Basic` class with only basic methods and an `Advanced` class that extends the `Basic` class and adds the advanced methods.
 
