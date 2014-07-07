@@ -87,3 +87,8 @@
     float: left;   
     margin-right: 1.5rem; 
 }
+
+.post-date-prefix {
+    display: inline-block;
+    width: 6rem;
+}

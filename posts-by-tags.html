@@ -22,7 +22,10 @@ title:   Posts by tags
   <h3 id="{{ tag | uri_escape }}">{{ tag }} ({{ site.tags[tag] | size }})</h3>
   <ul>
   {% for post in site.tags[tag] %}
-    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+    <li>
+      <span class="post-date-prefix">{{ post.date | date_to_string }}: </span>
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
   {% endfor %}
   </ul>
 {% endfor %}
