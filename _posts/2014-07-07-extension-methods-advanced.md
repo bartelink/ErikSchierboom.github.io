@@ -10,7 +10,7 @@ Previously, the [Extension methods - An introduction]({% post_url 2014-06-23-ext
 ### Gracefully handle null values
 Regular instance methods throw a `NullReferenceException` when called on a `null` instance. However, extension methods are static methods and thus can choose how to handle `null` values. We can use this to create methods that appear to be instance methods, but don't throw a `NullReferenceException` when invoked on a `null` instance.
 
-As an example, this extension method safely returns an object's hash code:
+As an example, this extension method defines a null-safe wrapper for the existing [`GetHashCode()`](http://msdn.microsoft.com/en-us/library/system.object.gethashcode\(v=vs.110\).aspx) method:
 
 {% highlight c# %}
 public static class ObjectExtensions
