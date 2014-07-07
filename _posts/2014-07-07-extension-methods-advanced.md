@@ -5,7 +5,7 @@ comments: true
 tags:     [C#, .NET]
 ---
 
-The [Extension methods - An introduction]({% post_url 2014-06-23-extension-methods-an-introduction %}) post showed the basics of extension methods. This post will show more advanced usages of extension methods.
+Previously, the [Extension methods - An introduction]({% post_url 2014-06-23-extension-methods-an-introduction %}) post showed the basics of extension methods. This post will show more advanced usages of extension methods.
 
 ### Gracefully handle null values
 Regular instance methods throw a `NullReferenceException` when called on a `null` instance. However, extension methods are static methods and thus can choose how to handle `null` values. We can use this to create methods that appear to be instance methods, but don't throw a `NullReferenceException` when invoked on a `null` instance.
