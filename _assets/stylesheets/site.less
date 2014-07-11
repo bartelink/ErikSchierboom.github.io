@@ -18,7 +18,7 @@
     font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 
-.social {
+#social {
     margin-right: 15px;
 
     a {
@@ -62,13 +62,6 @@
             .social-icon(#c6230b, #961909);
         }
     } 
-
-    @media screen and (max-width: 1040px) {  
-        float: none;
-        margin-right: 0;
-     
-        a:last-of-type { margin-right: 0 }
-    }
 } 
 
 .post-meta {
@@ -95,4 +88,22 @@
 .post-date-prefix {
     display: inline-block;
     width: 6rem;
+}
+
+@media screen and (max-width: 766px) {  
+    #copyright {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {  
+    #social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {  
+    #description {
+        display: none;
+    }
 }

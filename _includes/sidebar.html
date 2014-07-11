@@ -2,7 +2,7 @@
   <div class="container">
     <div class="sidebar-about">
       <h1><a href="/" title="Home • {{ site.title }}">{{ site.title }}</a></h1>
-      <p class="lead">{{ site.description }}</p>
+      <p id="description" class="lead">{{ site.description }}</p>
     </div>
 
     <ul class="sidebar-nav">
@@ -22,14 +22,14 @@
         <a href="/software/" title="Software">Software</a>
       </li>
     </ul>
-    
-  <div class="social">      
+
+    <div id="social">      
       <a class="stackoverflow" href="http://stackoverflow.com/users/2071395/erik-schierboom" title="Stack Overflow account"><i class="icon-stackoverflow">Stack Overflow</i></a>
       <a class="github" href="https://github.com/erikschierboom" title="GitHub account"><i class="icon-github">GitHub</i></a>      
       <a class="twitter" href="http://twitter.com/erikschierboom" title="Twitter account"><i class="icon-twitter">Twitter</i></a>
       <a class="rss" href="/atom.xml" title="RSS feed"><i class="icon-rss">RSS</i></a>    
-  </div>
+    </div>
 
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+    <p id="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
   </div>
 </div>
