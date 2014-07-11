@@ -15,9 +15,19 @@ module.exports = function(grunt) {
     },
     sprite:{
       all: {
-        src: '_assets/images/*.png',
-        destImg: 'images/spritesheet.png',
+        src: '_assets/images/social/*.png',
+        destImg: '_assets/images/spritesheet.png',
         destCSS: '_assets/stylesheets/spritesheet.css'
+      }
+    },
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: '_assets/images',
+          src: ['*.{png,jpg,gif}'],
+          dest: 'images/'
+        }]
       }
     },
     watch: {
@@ -34,6 +44,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-contrib-cssmin');  
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-newer');
 
-  grunt.registerTask('default', ['sprite', 'cssmin']);
+  grunt.registerTask('default', ['sprite', 'newer:imagemin', 'newer:cssmin']);
 };

@@ -6,25 +6,25 @@ Icon classes can be used entirely standalone. They are named after their origina
 ```
 */
 .icon-github {
-  background-image: url(../../images/spritesheet.png);
+  background-image: url(../images/spritesheet.png);
   background-position: 0px 0px;
   width: 16px;
   height: 16px;
 }
 .icon-rss {
-  background-image: url(../../images/spritesheet.png);
+  background-image: url(../images/spritesheet.png);
   background-position: 0px -16px;
   width: 16px;
   height: 16px;
 }
 .icon-stackoverflow {
-  background-image: url(../../images/spritesheet.png);
+  background-image: url(../images/spritesheet.png);
   background-position: 0px -32px;
   width: 16px;
   height: 16px;
 }
 .icon-twitter {
-  background-image: url(../../images/spritesheet.png);
+  background-image: url(../images/spritesheet.png);
   background-position: 0px -48px;
   width: 16px;
   height: 16px;
