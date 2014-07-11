@@ -25,7 +25,7 @@ Over the years I have worked on lots of software projects, such as:
 
 ### Tools
 
-- [MPWinamp](http://sourceforge.net/projects/mpwinamp/): a plug-in to allow automatic updating of your MSN nickname based on what song was playing in Winamp.<br/>
+- [MPWinamp](https://github.com/ErikSchierboom/MPWinamp): a plug-in to allow automatic updating of your MSN nickname based on what song was playing in Winamp.<br/>
 Disclaimer: my first public source code, so please don't judge my coding skills by this code :)
 
 ### Demo applications
@@ -33,6 +33,10 @@ Disclaimer: my first public source code, so please don't judge my coding skills 
 - [Client-side globalization](https://github.com/ErikSchierboom/clientsideglobalization): shows how to do globalization on the client.
 
 - [Custom OAuth client](https://github.com/ErikSchierboom/CustomOAuthClient): explains how to create a custom OAuth client for use in ASP.NET websites.
+
+### Miscellaneous
+
+- [Thesis](https://github.com/ErikSchierboom/thesis): contains the LaTeX source of my [master's thesis](/documents/thesis.pdf), as well as the [PVS](http://pvs.csl.sri.com/) definitions and proofs that go with it.
 
 ### Open-source
 
