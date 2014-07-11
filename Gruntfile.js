@@ -2,16 +2,16 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    cssmin: {
-        combine: {
-            files: {
-              'stylesheets/master.min.css': ['_assets/stylesheets/poole.css', 
-                                             '_assets/stylesheets/syntax.css', 
-                                             '_assets/stylesheets/hyde.css', 
-                                             '_assets/stylesheets/spritesheet.css',
-                                             '_assets/stylesheets/site.css']
-            }
+    less: {
+      production: {
+        options: {
+          compress: true,
+          cleancss: true,
+        },
+        files: {
+          'stylesheets/site.min.css': '_assets/stylesheets/site.less'
         }
+      }
     },
     sprite:{
       all: {
@@ -31,9 +31,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      scripts: {
-        files: ['_assets/stylesheets/*.css'],
-        tasks: ['cssmin'],
+      stylesheets: {
+        files: ['_assets/stylesheets/*.*'],
+        tasks: ['less'],
         options: {
           spawn: false,
         },
@@ -41,11 +41,11 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-spritesmith');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');  
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-newer');
 
-  grunt.registerTask('default', ['sprite', 'newer:imagemin', 'newer:cssmin']);
+  grunt.registerTask('default', ['sprite', 'newer:imagemin', 'newer:less']);
 };
