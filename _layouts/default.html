@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body id="{{ page.url | uri_escape }}">
 
     {% include sidebar.html %}
 
@@ -11,8 +11,9 @@
       {{ content }}
     </div>
 
+    {% include scripts.html %}
     {% include comments-count.html %}
     {% include analytics.html %}
-
+    
   </body>
 </html>

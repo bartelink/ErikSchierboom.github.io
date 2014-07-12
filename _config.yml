@@ -10,6 +10,7 @@ title:            Schier
 tagline:          'None'
 description:      'Coding for fun'
 url:              http://www.erikschierboom.com
+encoding:         UTF-8
 
 author:
   name:           'Erik Schierboom'
@@ -17,4 +18,5 @@ author:
 
 paginate:         5
 
-exclude:          ['*.sh', 'node_modules', 'package.json', 'Gruntfile.js', 'LICENSE.md', 'README.md', 'Gemfile', 'Gemfile.lock', 'CNAME']
+exclude:          ['*.sh', 'node_modules', 'package.json', 'tsd.json', 'bower.json', 'Gruntfile.js', 
+                   'LICENSE.md', 'README.md', 'CNAME', 'Gemfile', 'Gemfile.lock']
