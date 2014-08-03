@@ -18,7 +18,9 @@ export class App {
     getController(): controllers.Controller {
         switch (this.getPageUrl()) {
             case '/albums/':
-                return new controllers.AlbumsController();                
+                return new controllers.AlbumsController();
+            case '/movies/':
+                return new controllers.MoviesController();
             default:
                 return null;
         }

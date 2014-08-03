@@ -4,7 +4,7 @@ require './albumcatalog'
 
 if ARGV.length < 4 then
 	puts "Import an OrangeCD catalog XML file.\n\n" + 
-	     "ruby import-cds.rb [source-catalog-xmlfile] [source-catalog-image-directory] [destination-catalog-yamlfile] [destination-catalog-image-directory]";
+	     "ruby import-albums.rb [source-catalog-xmlfile] [source-catalog-image-directory] [destination-catalog-yamlfile] [destination-catalog-image-directory]";
 	exit;
 end
 

@@ -59,12 +59,20 @@ module.exports = function(grunt) {
           dest: 'images/'
         }]
       },
-      covers: {
+      albums: {
         files: [{
           expand: true,
           cwd: 'images/albums',
           src: ['*.{png,jpg,gif}'],
           dest: 'images/albums'
+        }]
+      },
+      movies: {
+        files: [{
+          expand: true,
+          cwd: 'images/movies',
+          src: ['*.{png,jpg,gif}'],
+          dest: 'images/movies'
         }]
       }
     },
