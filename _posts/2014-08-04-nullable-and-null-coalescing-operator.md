@@ -43,6 +43,14 @@ nonNullInt == 2;    // Returns true
 nonNullInt == null; // Returns false
 {% endhighlight %}
 
+The `Nullable<T>` class itself is implemented as a value type, so can we create a nullable `Nullable<T>`? Let's try:
+
+{% highlight c# %}
+Nullable<Nullable<int>> nullableInception = null;
+{% endhighlight %}
+
+It turns out we can't; the above code does *not* compile. This is due to the fact that the `Nullable<T>` struct does not allow nullable types to be specified as its generic type parameter (see [MSDN](http://msdn.microsoft.com/en-us/library/d5x73970.aspx)).
+
 #### The **??** operator
 Besides adding `Nullable<T>`, C# 2.0 introduced another feature that deals with `null` values: the **??** operator (also known as the *null-coalescing* operator). It returns the left-hand operand if that is not null; otherwise it returns the right hand operand. This simple operator can greatly simplify your `null` checks:
 
@@ -107,7 +115,20 @@ int? nullInt = null;
 int? nonNullInt = 2;
 
 nullInt ?? 8;    // Returns 8
-nonNullInt ?? 5; // Return 2
+nonNullInt ?? 5; // Returns 2
+{% endhighlight %}
+
+If you use the **??** operator to return a type's default value, you can also use the `GetValueOrDefault()` method:
+
+{% highlight c# %}
+int? nullInt = null;
+int? nonNullInt = 2;
+
+nullInt.GetValueOrDefault();    // Returns 0
+nullInt ?? default(int);        // Returns 0
+
+nonNullInt.GetValueOrDefault(); // Returns 2
+nonNullInt ?? default(int);     // Returns 2
 {% endhighlight %}
 
 ### Summary
