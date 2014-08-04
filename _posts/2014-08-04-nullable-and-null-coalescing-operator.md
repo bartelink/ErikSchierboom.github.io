@@ -28,8 +28,8 @@ Nullable<double> nonNullDouble = 2.0;
 Even better, appending the **?** keyword to a type makes it a `Nullable<T>`:
 
 {% highlight c# %}
-int? nullInt = 2;         // Equal to Nullable<int>
-bool? nonNullBool = true; // Equal to Nullable<bool>
+int? nullInt = 2;         // Type is Nullable<int>
+bool? nonNullBool = true; // Type is Nullable<bool>
 {% endhighlight %}
 
 Comparing nullable types also works as expected:
@@ -114,4 +114,4 @@ nonNullInt ?? 5; // Return 2
 
 Adding support for nullable value types was a very useful addition to C#. I use it often when dealing with databases, where nullable value types are common. 
 
-The **??** operator is a personal favorite of mine. Everytime I use it, I still marvel at its elegance and usefulness.
+The **??** operator is a personal favorite of mine due to its conciseness and usefulness.
