@@ -47,7 +47,7 @@ module.exports = function(grunt) {
       all: {
         src: '_assets/images/social/*.png',
         destImg: '_assets/images/spritesheet.png',
-        destCSS: '_assets/stylesheets/spritesheet.css'
+        destCSS: '_assets/stylesheets/spritesheet.less'
       }
     },
     imagemin: {

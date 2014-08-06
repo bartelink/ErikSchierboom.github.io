@@ -2,7 +2,7 @@
   <div class="container">
     <div class="sidebar-about">
       <h1><a href="/" title="Home • {{ site.title }}">{{ site.title }}</a></h1>
-      <p id="description" class="lead">{{ site.description }}</p>
+      <p id="description" class="lead hidden-xs">{{ site.description }}</p>
     </div>
 
     <ul class="sidebar-nav">
@@ -23,13 +23,13 @@
       </li>
     </ul>
 
-    <div id="social">      
-      <a class="stackoverflow" href="http://stackoverflow.com/users/2071395/erik-schierboom" title="Stack Overflow account"><i class="icon-stackoverflow">Stack Overflow</i></a>
-      <a class="github" href="https://github.com/erikschierboom" title="GitHub account"><i class="icon-github">GitHub</i></a>      
-      <a class="twitter" href="http://twitter.com/erikschierboom" title="Twitter account"><i class="icon-twitter">Twitter</i></a>
-      <a class="rss" href="/atom.xml" title="RSS feed"><i class="icon-rss">RSS</i></a>    
+    <div id="social" class="hidden-sm">      
+      <a class="stackoverflow" href="http://stackoverflow.com/users/2071395/erik-schierboom" title="Stack Overflow account"><i class="icon">Stack Overflow</i></a>
+      <a class="github" href="https://github.com/erikschierboom" title="GitHub account"><i class="icon">GitHub</i></a>      
+      <a class="twitter" href="http://twitter.com/erikschierboom" title="Twitter account"><i class="icon">Twitter</i></a>
+      <a class="rss" href="/atom.xml" title="RSS feed"><i class="icon">RSS</i></a>
     </div>
 
-    <p id="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+    <p id="copyright" class="hidden-md">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
   </div>
 </div>
