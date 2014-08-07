@@ -18,5 +18,6 @@ author:
 
 paginate:         5
 
-exclude:          ['*.sh', 'node_modules', 'bower_components', 'package.json', 'tsd.json', 'bower.json', 'Gruntfile.js', 
-                   'LICENSE.md', 'README.md', 'CNAME', 'Gemfile', 'Gemfile.lock']
+exclude:          ['node_modules', 'bower_components', 'typings', 'lib',
+                   'package.json', 'tsd.json', 'bower.json', 'Gruntfile.js', 
+                   '*.sh', 'LICENSE.md', 'README.md', 'CNAME', 'Gemfile', 'Gemfile.lock']

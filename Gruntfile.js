@@ -2,6 +2,9 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    bower: {
+      install: {}
+    },
     typescript: {
       src: {
         src: ['_assets/scripts/*.ts'],
@@ -94,6 +97,7 @@ module.exports = function(grunt) {
     },
   });
     
+  grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-typescript');
   grunt.loadNpmTasks('grunt-tsd');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -104,6 +108,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
 
   grunt.registerTask('default', [
+    'bower:install',
     'tsd:install',
     'typescript:src',
     'requirejs:compile',
