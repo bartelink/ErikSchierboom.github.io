@@ -7,11 +7,11 @@ module.exports = function(grunt) {
     },
     typescript: {
       src: {
-        src: ['_assets/scripts/*.ts'],
+        src: ['_scripts/*.ts'],
         dest: '_temp/scripts',
         options: {
           module: 'amd',
-          basePath: '_assets/scripts/',
+          basePath: '_scripts/',
           noImplicitAny: true,
         }
       }
@@ -42,22 +42,22 @@ module.exports = function(grunt) {
           cleancss: true,
         },
         files: {
-          'stylesheets/site.min.css': '_assets/stylesheets/site.less'
+          'stylesheets/site.min.css': '_stylesheets/site.less'
         }
       }
     },
     sprite:{
       all: {
-        src: '_assets/images/social/*.png',
-        destImg: '_assets/images/spritesheet.png',
-        destCSS: '_assets/stylesheets/spritesheet.less'
+        src: '_images/social/*.png',
+        destImg: 'images/spritesheet.png',
+        destCSS: '_stylesheets/spritesheet.less'
       }
     },
     imagemin: {
       dynamic: {
         files: [{
           expand: true,
-          cwd: '_assets/images',
+          cwd: '_images',
           src: ['*.{png,jpg,gif}'],
           dest: 'images/'
         }]
@@ -81,14 +81,14 @@ module.exports = function(grunt) {
     },
     watch: {
       typescript: {
-        files: ['_assets/scripts/*.ts'],
+        files: ['_scripts/*.ts'],
         tasks: ['typescript', 'requirejs'],
         options: {
           spawn: false,
         },
       },
       stylesheets: {
-        files: ['_assets/stylesheets/*.*'],
+        files: ['_stylesheets/*.*'],
         tasks: ['less'],
         options: {
           spawn: false,
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
     'typescript:src',
     'requirejs:compile',
     'sprite:all',
-    'less:src',
-    'newer:imagemin'
+    'newer:imagemin',
+    'less:src',    
   ]);
 };
