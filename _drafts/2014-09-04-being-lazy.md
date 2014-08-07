@@ -131,5 +131,11 @@ var value2 = lazy.Value; // Second time, returns previous value
 value1 == value2; // Returns true!
 {% endhighlight %}
 
+Note that by default, `Lazy<T>` instances are thread safe. If you don't want it to be thread-safe, you can use one of the [constructor overloads](http://msdn.microsoft.com/en-us/library/dd642318\(v=vs.110\).aspx) that let you specify the thread safety mode:
+
+{% highlight c# %}
+var nonThreadSafeLazy = new Lazy<int>(LazyThreadSafetyMode.None);
+{% endhighlight %}
+
 ### Summary
 Lazy loading can be a good optimization strategy, but you should only use if when performance is an issue. When you do have a use case for lazy-loading, the `Lazy<T>` class makes it easy to implement.
