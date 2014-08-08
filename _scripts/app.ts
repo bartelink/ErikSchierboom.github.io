@@ -4,7 +4,7 @@ import $ = require('jquery')
 import controllers = require('./controllers')
 
 export class App {
-
+ 
     run () {
     	var controller = this.getController();
 

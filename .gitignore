@@ -39,7 +39,9 @@ validation-report.json
 
 # Folders to ignore
 .grunt
+.sass-cache
 _temp
+_scripts/build
 node_modules
 bower_components
 typings

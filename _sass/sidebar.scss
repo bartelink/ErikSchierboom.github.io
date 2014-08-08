@@ -1,9 +1,9 @@
-.icon-social(@color, @icon) {  
-    background-color: @color;
-    border: 1px solid @color;
+@mixin icon-social($color, $icon) {  
+    background-color: $color;
+    border: 1px solid $color;
 
     .icon {
-      .sprite(@icon);
+      @include sprite($icon);
     }
 }
  
@@ -16,8 +16,8 @@
     margin-right: 15px;
 
     a {
-        .border-radius(50%);
-        .transition(0.3s);
+        @include border-radius(50%);
+        @include transition(0.3s);
          
         display: -moz-inline-stack;
         display: inline-block;
@@ -41,19 +41,19 @@
         }
 
         &.twitter {
-            .icon-social(#55cff8, @twitter);
+            @include icon-social(#55cff8, $twitter);
         }
 
         &.github {
-            .icon-social(#afb6ca, @github);
+            @include icon-social(#afb6ca, $github);
         }
 
         &.rss {
-            .icon-social(#ef7522, @rss);
+            @include icon-social(#ef7522, $rss);
         }        
 
         &.stackoverflow {
-            .icon-social(#c6230b, @stackoverflow);
+            @include icon-social(#c6230b, $stackoverflow);
         }
     } 
 } 
