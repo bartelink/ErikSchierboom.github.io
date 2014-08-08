@@ -41,10 +41,7 @@ module.exports = function(grunt) {
         options: {
           module: 'amd',
           basePath: '_scripts/',
-          noImplicitAny: true,
-          watch: {
-            after: ['requirejs']
-          }
+          noImplicitAny: true
         }
       }
     },
