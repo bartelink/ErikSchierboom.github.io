@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             filter: 'isFile',
             cwd: './bower_components/hyde/public/css',
             src: '*.css',
-            dest: './bower_components/hyde/public/scss',
+            dest: './_sass',
             ext: '.scss'
           }
         ]
