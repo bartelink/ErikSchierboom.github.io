@@ -21,7 +21,7 @@ module.exports = function(grunt) {
             cwd: './bower_components/hyde/public/css',
             src: '*.css',
             dest: './bower_components/hyde/public/scss',
-            ext: '.scss'            
+            ext: '.scss'
           }
         ]
       }
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
           noImplicitAny: true,
           watch: {
             after: ['requirejs']
-          }          
+          }
         }
       }
     },
@@ -52,27 +52,27 @@ module.exports = function(grunt) {
       compile: {
         options: {
           baseUrl: '_scripts/build',
-          mainConfigFile: '_scripts/build/main.js',       
+          mainConfigFile: '_scripts/build/main.js',
           out: 'scripts/site.min.js',
           name: 'main',
-          optimize: 'uglify' 
+          optimize: 'uglify'
         }
       }
     }
   });
-  
-  grunt.loadNpmTasks('grunt-bower-task');  
+
+  grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-tsd');
-  grunt.loadNpmTasks('grunt-typescript'); 
-  grunt.loadNpmTasks('grunt-contrib-requirejs');  
+  grunt.loadNpmTasks('grunt-typescript');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   grunt.registerTask('default', [
     'bower:install',
     'copy:cssAsScss',
     'sprite:all',
     'tsd:install',
-    'typescript:src',    
+    'typescript:src'
   ]);
 };
