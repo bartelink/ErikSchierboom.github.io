@@ -51,7 +51,7 @@ We now only calculate the result when needed, but we do it every single time `Re
 {% highlight c# %}
 public class LazyLoading
 {
-    private int lazyResult = null;
+    private int? lazyResult = null;
 
     public int Result
     {
@@ -62,7 +62,7 @@ public class LazyLoading
                 lazyResult = Calculate();
             }
 
-            return lazyResult;    
+            return lazyResult.Value;    
         }        
     }
 }
@@ -87,7 +87,7 @@ public class LazyTypeLoading
 {
     private Lazy<int> lazyResult = new Lazy<int>(() => Calculate());
 
-    public string Result 
+    public int Result 
     { 
         get { return lazyResult.Value; } 
     } 
@@ -105,7 +105,7 @@ var result2 = lazyTypeLoading.Result;
 
 We replaced our boilerplate code with a `Lazy<string>` instance. When creating this instance, we provide it with a lambda expression that will be used to compute the return value. Note that the lambda expression is **not** executed when the instance is created, it is only stored for later use.
 
-When the `Value` property of a `Lazy<T>` instance is accessed, it checks if the value has already been calculated; if so, it returns that value and if not, it calculates the value and then returns it.
+When the `Value` property of a `Lazy<T>` instance is accessed, it checks if the value has already been calculated; if so, it returns that value and if not, it calculates the value, stores it and then returns it.
 
 You can use the `IsValueCreated` property to check if the `Value` has already been calculated:
 
