@@ -103,7 +103,7 @@ var result1 = lazyTypeLoading.Result;
 var result2 = lazyTypeLoading.Result;
 {% endhighlight %}
 
-We replaced our boilerplate code with a `Lazy<string>` instance. When creating this instance, we provide it with a lambda expression that will be used to compute the return value. Note that the lambda expression is **not** executed when the instance is created, it is only stored for later use.
+We replaced our boilerplate code with a `Lazy<int>` instance. When creating this instance, we provide it with a lambda expression that will be used to compute the return value. Note that the lambda expression is **not** executed when the instance is created, it is only stored for later use.
 
 When the `Value` property of a `Lazy<T>` instance is accessed, it checks if the value has already been calculated; if so, it returns that value and if not, it calculates the value, stores it and then returns it.
 
