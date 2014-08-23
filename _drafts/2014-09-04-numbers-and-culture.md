@@ -53,7 +53,7 @@ string numberString = "25.78";
 double number = double.Parse(numberString, new CultureInfo("en"));
 {% endhighlight %}
 
-Unfortunately, you would be wrong. This code can still throw a `FormatException` on some systems, and here's why. The problem is that cultures are not fixed; they are subject to user modification or by updates to the .NET framework or operating system. Even though you expect the English culture to use the `"."` string as its decimal separator, it *might* have a different value. The above example could run fine on your system, but crash on a system where the English culture was modified.
+Unfortunately, you would be wrong. The problem is that cultures are not fixed; they are subject to user modification and updates to the .NET framework or operating system. On systems where the decimal separator for the English culture was changed, the above code would throw a `FormatException`.
 
 Luckily, the .NET framework contains a predefined culture that is almost identical to the English culture but is *not* subject to modification. This culture is known as the *invariant* culture, and can be used through the [`CultureInfo.InvariantCulture`](http://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.invariantculture\(v=vs.110\).aspx) property. 
 
@@ -64,7 +64,7 @@ string numberString = "25.78";
 double number = double.Parse(numberString, CultureInfo.InvariantCulture);
 {% endhighlight %}
 
-This code works on every system, no matter what modifications were made to the system.
+This code works on every system, no matter what changes were made to its configuration.
 
 ### Retrieving the number format
 The decimal separator string used by a culture can be found by accessing its `NumberFormat.NumberDecimalSeparator` property:
@@ -164,7 +164,7 @@ using (CultureScope cultureScope = new CultureScope("es"))
 The trick we use is to have the `CultureScope` class implement `IDisposable`.  This allows us to take advantage of the `using` keyword, which guarantees that at the end of its scope the `Dispose()` method is called, where the culture is restored to its original value.
 
 ### Convert methods
-In this article, we have focused on the `Parse()` method defined on the number types themselves. There is another common way to convert from a string to a number, and that is to use the methods defined on the `Convert` class:
+In this article, we have focused on the `Parse()` method defined on the number types themselves. There is another common way to convert a string to a number, which is to use the `Convert` class:
 
 {% highlight c# %}
 string numberString = "25.78";
