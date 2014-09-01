@@ -13,8 +13,6 @@
 }
  
 #social {
-    margin-right: 15px;
-
     a {
         @include border-radius(50%);
         @include transition(0.3s);
